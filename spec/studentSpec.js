@@ -6,11 +6,12 @@ const Student = require('../app/student').Student;
 
 describe("test Student", function() {
 
+
     it("should return average score", function() {
 
         const score = [75, 95, 80, 80];
 
-        const student = new Student('张三', '001', 'Han', 2, score);
+        const student = new Student('张三', '001', score, 'Han', 2);
         const result = student.average;
         const expecText = 82.5;
 
@@ -22,7 +23,7 @@ describe("test Student", function() {
 
         const score = [75, 95, 80, 80];
 
-        const student = new Student('张三', '001', 'Han', 2, score);
+        const student = new Student('张三', '001', score);
         const result = student.total;
         const expecText = 330;
 

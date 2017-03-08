@@ -11,8 +11,8 @@ describe("test Dataset", function() {
 
         const score = [75, 95, 80, 80];
 
-        const zhangsan = new Student('张三', '001', 'Han', 2, score);
-        const lisi = new Student('李四', '002', 'Han', 2, score);
+        const zhangsan = new Student('张三', '001', score, 'Han', 2);
+        const lisi = new Student('李四', '002', score, 'Han', 2);
 
         const dataset = new Dataset();
 
@@ -31,9 +31,9 @@ describe("test Dataset", function() {
 
         const score = [75, 95, 80, 80];
 
-        const zhangsan = new Student('张三', '001', 'Han', 2, score);
-        const lisi = new Student('李四', '002', 'Han', 2, score);
-        const wangwu = new Student('王五', '003', 'Han', 2, score);
+        const zhangsan = new Student('张三', '001', score, 'Han', 2);
+        const lisi = new Student('李四', '002', score, 'Han', 2);
+        const wangwu = new Student('王五', '003', score, 'Han', 2);
 
         const dataset = new Dataset();
 

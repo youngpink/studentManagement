@@ -6,7 +6,7 @@
 
 class Student{
 
-    constructor(name, number, nationality = Han, klass = 1, score) {
+    constructor(name, number, score, nationality = '', klass = null) {
 
         this.name = name;
         this.number = number;

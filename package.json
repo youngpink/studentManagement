@@ -1,0 +1,14 @@
+{
+  "name": "grade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "spec": "./node_modules/.bin/jasmine-node spec --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}

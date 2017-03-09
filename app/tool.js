@@ -27,6 +27,17 @@ class Tool{
         return reg.test(string);
     }
 
+    static stringToArray(string){
+
+        let tempArray = string.split(', ');
+
+        return tempArray.map(function(element){
+            return element.indexOf(':') === -1 ? element : parseInt(element.split(': ')[1]);
+        })
+
+    }
+
+
 
 }
 

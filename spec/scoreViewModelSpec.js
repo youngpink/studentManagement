@@ -77,4 +77,24 @@ describe("test ScoreViewModel", function() {
 
     });
 
+    it("test joinScoreString, it should return a string", function() {
+
+        const zhangsan = new Student('张三', '001', [75, 95, 80, 80], 'Han', 2);
+
+        const scoreViewModel = new ScoreViewModel([zhangsan]);
+
+        const result = scoreViewModel.joinScoreString();
+
+        const expectText = '成绩单\n'
+            + '姓名|数学|语文|英语|编程|平均分|总分\n'
+            + '========================\n'
+            + '张三|75|95|80|80|82.5|330\n'
+            + '========================\n'
+            + '全班总分平均数：330\n'
+            + '全班总分中位数：330\n';
+
+        expect(result).toEqual(expectText);
+
+    });
+
 });

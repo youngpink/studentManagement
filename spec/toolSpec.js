@@ -46,4 +46,28 @@ describe("test Tool", function() {
         expect(result).toEqual(expecText);
 
     });
+
+    it("test stringToArray", function () {
+
+        const string = '张三, 001, 数学: 75, 语文: 95, 英语: 80, 编程: 80';
+
+        const result = Tool.stringToArray(string);
+
+        const expecText = ['张三', '001', 75, 95, 80, 80];
+
+        expect(result).toEqual(expecText);
+
+    });
+
+    it("test stringToArray", function () {
+
+        const string = '001, 002';
+
+        const result = Tool.stringToArray(string);
+
+        const expecText = ['001', '002'];
+
+        expect(result).toEqual(expecText);
+
+    });
 });

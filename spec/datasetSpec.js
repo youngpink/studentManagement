@@ -7,7 +7,7 @@ const Dataset = require('../app/dataset').Dataset;
 
 describe("test Dataset", function() {
 
-    it("test addStudent, should return all students", function() {
+    it("test addStudent, add two students, should return two students", function() {
 
         const score = [75, 95, 80, 80];
 
@@ -22,6 +22,26 @@ describe("test Dataset", function() {
         const result = dataset.students;
 
         const expecText = [zhangsan, lisi];
+
+        expect(result).toEqual(expecText);
+
+    });
+
+    it("test addStudent, add two students, should return one student", function() {
+
+        const score = [75, 95, 80, 80];
+
+        const zhangsan = new Student('张三', '001', score, 'Han', 2);
+        const lisi = new Student('李四', '001', score, 'Han', 2);
+
+        const dataset = new Dataset();
+
+        dataset.addStudent(zhangsan);
+        dataset.addStudent(lisi);
+
+        const result = dataset.students;
+
+        const expecText = [zhangsan];
 
         expect(result).toEqual(expecText);
 

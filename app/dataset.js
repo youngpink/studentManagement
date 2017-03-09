@@ -9,10 +9,18 @@ class Dataset{
     constructor(){
 
         this.students = [];
+        this.ids = [];
     }
 
     addStudent(student){
-        this.students.push(student);
+
+        if(this.ids.indexOf(student.number) === -1){
+            this.students.push(student);
+            this.ids.push(student.number);
+            return true;
+        }
+
+        return false;
     }
 
     findStudent(numbers){

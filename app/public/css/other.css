@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+.black-header{
+    background: black;
+    height: 45px;
+    color: white;
+    line-height: 45px;
+    font-size: 24px;
+    font-weight: 400;
+}
+body{
+    background: #d4d4d4;
+}
+header{
+    margin-top: -150px;
+}
+
+body div.main{
+    margin-top: 150px;
+    background: white;
+}
+
+div.photo {
+  margin-top: -75px;
+}
+
+div.photo > div{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 50%;
+    background: #d4d4d4;
+}
+
+h1 > span, h2{
+    color: red;
+}
+
+.box {
+    margin-bottom: 15px;
+}
+
+.box p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.box h2:before {
+    content: '//';
+    margin-right: 5px;
+}
+
+div.bg-gray{
+    background: #d4d4d4;
+    margin: 5px 0;
+}
+div.bg-red{
+    background: red;
+    color: white;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding: 5px 20px;
+}
+div.language{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #848484;
+}
+div.hobby{
+    color: white;
+    background: #a56a89;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+div.hobby:before{
+    content: '.';
+    margin-right: 15px;
+}
+div.padding30{
+    padding-left: 30px;
+}
+
+div.bg-gray:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: -16px;
+    height: 0;
+    width: 0;
+    border:8px solid transparent;
+    border-right-color: #d4d4d4;
+    pointer-events: none;
+}
+div.contact li{
+    height: 61px;
+
+}
+
+div.contact li > div{
+    height: 61px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+div.contact div span {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+div.contact div.only h3{
+    font-size: 20px;
+    margin: 20px 0;
+}
+div.contact div.icon{
+    border: 1px solid #d9d9d9;
+    border-width: 0 1px 1px 0;
+}
+
+div.contact div.info{
+    padding-left: 20px;
+
+}
+div.info{
+    padding-bottom: 6px;
+}
+div.info p{
+    font-size: 14px;
+}
+div.info h3{
+    font-size:20px;
+    margin: 9px 0;
+}
+div.vbar{
+    width:10px;
+    background: red;
+    height: 70px;
+    margin: 0 auto;
+
+}
+.gradient{
+    background: linear-gradient(to bottom,  #f00 0%,#fff 100%) ! important;
+ 
+}
+
+div.level{
+    height:10px;
+    border: 3px solid #ccc;
+    border-width:0 3px 3px 0;
+}
+div.first{
+    /*margin-left:15px;*/
+    border-left:3px solid #ccc;
+}
+p{
+    text-align:justify;
+}
+.navbar-wrapper a{
+    color: white !important;
+}
+
+
+

@@ -15,12 +15,13 @@
 </head>
 <body>
 <div class="container text-center">
+    <button type="button"class="btn btn-primary pull-right">主菜单</button>
 
     <table class="table table-hover text-left">
         <caption class="text-center"><h1>学生信息</h1></caption>
         <tbody>
         <tr><th>姓名</th><th>学号</th><th>民族</th><th>班级</th><th>数学</th><th>语文</th>
-            <th>英语</th><th>编程</th><th colspan="2">操作</th></tr>
+            <th>英语</th><th>编程</th><th>修改</th><th>删除</th></tr>
         <% students.forEach( (student) => { %>
         <tr><td><%= student.name %></td><td><%= student.number %></td><td><%= student.nationality %></td>
             <td><%= student.klass %></td><td><%= student.score[0] %></td><td><%= student.score[1] %></td>
@@ -30,19 +31,7 @@
         <% });%>
         </tbody>
     </table>
-
-    <form role="form" class="form-horizontal">
-        <div class="form-group">
-            <div class="col-md-offset-5 col-md-2">
-                <button type="button" id="return" class="btn btn-default">返回主菜单</button>
-            </div>
-        </div>
-    </form>
 </div>
-
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -50,14 +39,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title text-center" id="myModalLabel">学生信息</h4>
+                <h4 class="modal-title text-center" id="myModalLabel">学生个人信息</h4>
             </div>
             <div class="modal-body">
                 <%- include('change'); %>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">保存</button>
+                <button type="button" class="btn btn-primary" id="save" data-num="">保存</button>
             </div>
         </div>
     </div>
@@ -66,5 +55,6 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.js"></script>
 <script src="./js/allstudents.js"></script>
+<script src="./FrontendJS/studentInfoCheck.js"></script>
 </body>
 </html>

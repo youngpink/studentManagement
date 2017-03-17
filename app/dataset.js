@@ -33,10 +33,10 @@ class Dataset{
     }
 
     deleteStudent(num){
-        let numbers = this.students.map((student)=>{return student.number});
-        let index = numbers.indexOf(num);
+        let index = this.ids.indexOf(num);
         if(index !== -1){
             this.students.splice(index, 1);
+            this.ids.splice(index, 1);
         }
         return index;
     }

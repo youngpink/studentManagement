@@ -28,8 +28,19 @@ $("#submitNumbers").click((event) => {
         };
 
         $.post("/printScore",dataPut, (data) => {
-            // document.location.assign('/score/' + data);
-            let result =  '<pre>'+ data + '<button type="button" id="score" class="btn btn-default">返回主菜单</button>' +'<pre>'
+
+            let result = '<button type="button" id="score" class="btn btn-primary pull-right">主菜单</button>';
+            result += '<table class="table table-hover text-left">'
+                    + '<caption class="text-center"><h1>成绩单</h1></caption><tbody>'
+                    + '<tr><th>姓名</th><th>数学</th><th>语文</th><th>英语</th><th>编程</th><th>平均分</th><th>总分</th></tr>';
+            data.students.forEach( (student) => {
+                result += '<tr><td>' + student.name + '</td><td>' + student.score[0] + '</td><td>' + student.score[1] + '</td>'
+                    + '<td>' + student.score[2] + '</td><td>' + student.score[3] + '</td><td>' + student.average + '</td>'
+                    + '<td>' + student.total + '</td></tr>';
+            });
+            result += '<tr><td colspan="2">全班总分平均数：</td><td colspan="5">' + data.average + '</td></tr>'+
+                '<tr><td colspan="2">全班总分中位数：</td><td colspan="5">' + data.median + '</td></tr> </tbody> </table>';
+            
             $('#display').html(result);
         });
     }

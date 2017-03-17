@@ -42,6 +42,7 @@ class ScoreViewModel{
         infoArray.push(student.average);
         infoArray.push(student.total);
 
+
         return infoArray.join('|');
     }
 

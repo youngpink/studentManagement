@@ -51,9 +51,7 @@ app.get('/print', (req, res) => {
 });
 
 app.get('/change', (req, res) => {
-    dataset.students.length === 0
-     ? res.send('no students')
-     : res.render('allstudents', {students : dataset.students});
+    res.render('allstudents', {students : dataset.students});
 });
 
 app.post('/addStudent', (req, res) => {
@@ -76,7 +74,7 @@ app.post('/printScore', (req, res) => {
     let scoreViewModel = new ScoreViewModel(students);
 
     let result = scoreViewModel.joinScoreString();
-    res.send(result);
+    res.send(scoreViewModel);
 
 });
 
@@ -88,8 +86,13 @@ app.post('/delete', (req, res) => {
     res.send(dataset.deleteStudent(req.body.number).toString());
 });
 
-app.post('./change', (req, res) => {
+app.post('/update', (req, res) => {
 
+    let student = dataset.findStudent(req.body.number)[0];
+
+    student.setAll(req.body.name, [req.body.math, req.body.chinese, req.body.english, req.body.programing], req.body.nationality, req.body.klass);
+
+    res.send(true);
 
 });
 

@@ -37,7 +37,26 @@ class Tool{
 
     }
 
+    static  nameCheck(value){
+        let reg = /^[\u4E00-\u9FFF]{2,}$/;
+        return reg.test(value);
+    }
 
+    static numberCheck(value){
+        let reg = /^[0-9]{3}$/;
+        return reg.test(value);
+    }
+
+    static scoreCheck(value){
+        let reg = /^[0-9]{1,2}$/;
+        return reg.test(value);
+    }
+
+    static numbersCheck(value){
+        let reg = /^([0-9]+)(,\s[0-9]+)*$/;
+
+        return reg.test(value);
+    }
 
 }
 

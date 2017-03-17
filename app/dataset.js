@@ -24,9 +24,21 @@ class Dataset{
     }
 
     findStudent(numbers){
-        return this.students.filter(function(student){
+
+        let student =  this.students.filter(function(student){
             return numbers.indexOf(student.number) !== -1 ;
-        })
+        });
+
+        return student;
+    }
+
+    deleteStudent(num){
+        let numbers = this.students.map((student)=>{return student.number});
+        let index = numbers.indexOf(num);
+        if(index !== -1){
+            this.students.splice(index, 1);
+        }
+        return index;
     }
 }
 

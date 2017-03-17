@@ -18,6 +18,25 @@ class Student{
 
     }
 
+
+
+    static studentInit(req){
+
+        let name = req.body.name;
+        let number = req.body.number;
+        let nationality = req.body.nationality;
+        let klass = req.body.klass;
+        let math = parseInt(req.body.math);
+        let chinese = parseInt(req.body.chinese);
+        let english = parseInt(req.body.english);
+        let programing = parseInt(req.body.programing);
+
+        return klass === '' || nationality === ''
+            ? new Student(name, number, [math, chinese, english, programing])
+            : new Student(name, number, [math, chinese, english, programing], nationality, klass);
+
+    }
+
 }
 
 module.exports.Student = Student;

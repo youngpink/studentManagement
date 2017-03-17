@@ -16,12 +16,25 @@
 <body>
 <div class="container text-center">
 
+    <table class="table table-hover text-left">
+        <caption class="text-center"><h1>成绩单</h1></caption>
+        <tbody>
+            <tr><th>姓名</th><th>数学</th><th>语文</th><th>英语</th><th>编程</th><th>平均分</th><th>总分</th></tr>
+            <tr><td colspan="7">========================</td></tr>
+            <% scoreViewModel.students.forEach( (student) => { %>
+            <tr><td><%= student.name %></td><td><%= student.score[0] %></td><td><%= student.score[1] %></td>
+                <td><%= student.score[2]%></td><td><%= student.score[3] %></td><td><%= student.average %></td>
+                <td><%= student.total %></td></tr>
+            <% });%>
+            <tr><td colspan="7">========================</td></tr>
+            <tr><td colspan="2">全班总分平均数：</td><td colspan="5"><%= scoreViewModel.average %></td></tr>
+            <tr><td colspan="2">全班总分中位数：</td><td colspan="5"><%= scoreViewModel.median %></td></tr>
+        </tbody>
+    </table>
+
     <form role="form" class="form-horizontal" action="/menu" method="post">
         <div class="form-group">
-           <%= scoreString%>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-md-offset-5 col-md-2">
                 <button type="submit" class="btn btn-default">返回主菜单</button>
             </div>
         </div>

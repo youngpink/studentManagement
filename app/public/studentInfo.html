@@ -1,0 +1,79 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+    <!--<title>添加学生信息</title>-->
+
+    <!--<link href="./css/bootstrap.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+<!--</head>-->
+<div class="container text-center">
+    <form role="form" name="form" class="form-horizontal" action="/addStudent" method="post">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label ">姓名</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入至少两个汉字的名字">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="number" class="col-sm-2 control-label ">学号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="number" name="number" placeholder="请输入三位数字学号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nationality" class="col-sm-2 control-label ">民族</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="请输入民族">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="klass" class="col-sm-2 control-label ">班级</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="klass" name="klass" placeholder="请输入班级">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="math" class="col-sm-2 control-label ">数学</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="math" name="math" placeholder="请输入0~99的分数">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="chinese" class="col-sm-2 control-label ">语文</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="chinese" name="chinese" placeholder="请输入0~99的分数">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="english" class="col-sm-2 control-label ">英语</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="english" name="english" placeholder="请输入0~99的分数">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="programing" class="col-sm-2 control-label ">编程</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="programing" name="programing" placeholder="请输入0~99的分数">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-5 col-md-2">
+                <button type="submit" class="btn btn-default" id="submit">确定</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!--<script src="./js/jquery.min.js"></script>-->
+<!--<script src="./js/bootstrap.js"></script>-->
+<!--<script src="./FrontendJS/studentInfoCheck.js"></script>-->
+<!--</html>-->

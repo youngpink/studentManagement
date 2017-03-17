@@ -15,7 +15,7 @@ class ScoreViewModel{
 
         let total = this.students.map(student => student.total).reduce((a, b) => a + b);
         let temp =  total / this.students.length;
-        return Math.round(temp * 100) / 100;
+        return Math.round(temp * 10) / 10;
 
     }
 
@@ -47,9 +47,9 @@ class ScoreViewModel{
 
     joinScoreString(){
 
-        if(this.students.length === 0){
-            return '当前系统无任何该学生的信息';
-        }
+        // if(this.students.length === 0){
+        //     return '当前系统无任何该学生的信息';
+        // }
 
         let scoreString = '成绩单\n'
             + '姓名|数学|语文|英语|编程|平均分|总分\n'

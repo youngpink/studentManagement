@@ -14,18 +14,19 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<div class="container text-center">
-    <form role="form" class="form-horizontal" action="/printScore" method="post">
-        <div class="form-group">
+<body>
+<div class="container text-center" id="display">
+    <form role="form" name="formNumbers" class="form-horizontal">
+        <div class="form-group" >
             <label for="number" class="col-sm-2 control-label ">学号</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="number" name="number" placeholder="请输入学号">
+                <input type="text" class="form-control" id="numbers" name="number" placeholder="请输入学号, 用', '隔开">
             </div>
         </div>
 
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">确定</button>
+            <div class="col-md-offset-5 col-md-2">
+                <button type="button" class="btn btn-default" id="submitNumbers">确定</button>
             </div>
         </div>
 
@@ -34,4 +35,6 @@
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.js"></script>
+<script src="./FrontendJS/numberInfoCheck.js"></script>
+</body>
 </html>

@@ -15,17 +15,17 @@
     <![endif]-->
 </head>
 <div class="container text-center">
-    <form role="form" class="form-horizontal" action="/addStudent" method="post">
+    <form role="form" name="form" class="form-horizontal" >
         <div class="form-group">
             <label for="name" class="col-sm-2 control-label ">姓名</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" name="name" placeholder="请输入姓名">
+                <input type="text" class="form-control" id="name" name="name" placeholder="请输入至少两个汉字的名字">
             </div>
         </div>
         <div class="form-group">
             <label for="number" class="col-sm-2 control-label ">学号</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="number" name="number" placeholder="请输入学号">
+                <input type="text" class="form-control" id="number" name="number" placeholder="请输入三位数字学号">
             </div>
         </div>
         <div class="form-group">
@@ -43,30 +43,30 @@
         <div class="form-group">
             <label for="math" class="col-sm-2 control-label ">数学</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="math" name="math" placeholder="请输入数学成绩">
+                <input type="text" class="form-control score" id="math" name="math" placeholder="请输入0~99的分数">
             </div>
         </div>
         <div class="form-group">
             <label for="chinese" class="col-sm-2 control-label ">语文</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="chinese" name="chinese" placeholder="请输入语文成绩">
+                <input type="text" class="form-control score" id="chinese" name="chinese" placeholder="请输入0~99的分数">
             </div>
         </div>
         <div class="form-group">
             <label for="english" class="col-sm-2 control-label ">英语</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="english" name="english" placeholder="请输入英语成绩">
+                <input type="text" class="form-control score" id="english" name="english" placeholder="请输入0~99的分数">
             </div>
         </div>
         <div class="form-group">
             <label for="programing" class="col-sm-2 control-label ">编程</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="programing" name="programing" placeholder="请输入编程成绩">
+                <input type="text" class="form-control score" id="programing" name="programing" placeholder="请输入0~99的分数">
             </div>
         </div>
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">确定</button>
+            <div class="col-md-offset-5 col-md-2">
+                <button type="button" class="btn btn-default" id="submit">确定</button>
             </div>
         </div>
 
@@ -75,4 +75,5 @@
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.js"></script>
+<script src="./FrontendJS/studentInfoCheck.js"></script>
 </html>

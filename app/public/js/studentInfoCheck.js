@@ -5,20 +5,29 @@
 const Tool = require('../../tool').Tool;
 
 $("body").on('blur', '#name', (e) => {
-    if(!Tool.nameCheck(e.target.value)){
-        e.target.value = '';
+    let obj = $(e.target);
+    if(!Tool.nameCheck($(obj).val())){
+        $(obj).parent().siblings('p').html('请输入至少两个汉字');
+    }else{
+        $(obj).parent().siblings('p').html('');
     }
 });
 
 $("body").on('blur', '#number', (e) => {
-    if(!Tool.numberCheck(e.target.value)){
-        e.target.value = '';
+    let obj = $(e.target);
+    if(!Tool.numberCheck($(obj).val())){
+        $(obj).parent().siblings('p').html('请输入三位数字学号');
+    }else{
+        $(obj).parent().siblings('p').html('');
     }
 });
 
 $("body").on('blur', '.score', (e) => {
-    if(!Tool.scoreCheck(e.target.value)){
-        e.target.value = '';
+    let obj = $(e.target);
+    if(!Tool.scoreCheck($(obj).val())){
+        $(obj).parent().siblings('p').html('请输入0~99的分数');
+    }else{
+        $(obj).parent().siblings('p').html('');
     }
 });
 
